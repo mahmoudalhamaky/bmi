@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'BMI',
       theme:ThemeData.dark().copyWith(
-      //  primaryColor:Color(0xff0A2E29)
+        //primaryColor:Color(0xff0A2E29)
 
     ),
       home: const Bmi(),
