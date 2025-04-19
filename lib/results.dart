@@ -3,9 +3,17 @@ import 'package:bmi/constants.dart';
 import 'package:flutter/material.dart';
 
 class Results extends StatelessWidget {
-  Results({required String BmiResult, required String Interpretation, required String ResultText}){
+  Results({required String this.BmiResult, required String this.Interpretation,
+    required String this.ResultText,})
 
-  };
+  {
+
+  }
+
+  final String BmiResult ;
+  final String Interpretation ;
+  final String ResultText ;
+
 
   @override
   Widget build(BuildContext context) {
