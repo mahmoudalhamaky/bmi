@@ -25,52 +25,85 @@ class Results extends StatelessWidget {
           children: [
 
             ReusableCard(colour: my1Color, onTap: (){},CardChild: Text(
-              'The Results',
+              'Results',
               style: KresultStyle,
             ),),
-            Row(
-              spacing: 50,
-              mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  'Your Score',
-                  // textAlign: TextAlign.start,
-                  style: KlabelStyle,
+            Expanded(
+              child: Container(
+                color:my1Color ,
+                child: Row(
+                  spacing: 50,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  //crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Your Score',
+                      // textAlign: TextAlign.start,
+                      style: KlabelStyle,
+                    ),
+                    Text(
+                      '$BmiResult',
+                      style: KresultStyle,
+                    ),
+                  ],
                 ),
-                Text(
-                  '$BmiResult',
-                  style: KresultStyle,
-                ),
-              ],
+              ),
             ),
-            Row(
-              spacing: 10,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'You are',
-                  style: KlabelStyle,
+            Expanded(
+              child: Container(
+                color: my1Color,
+                child: Row(
+                  spacing: 10,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'You are',
+                      style: KlabelStyle,
+                    ),
+                    Text(
+                      '$ResultText',
+                      style: KresultStyle,
+                    ),
+                  ],
                 ),
-                Text(
-                  '$ResultText',
-                  style: KresultStyle,
-                ),
-              ],
+              ),
             ),
-            Row(
-              spacing: 30,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Recommend',
-                  style: KlabelStyle,
+            Expanded(
+              child: Container(
+                color: my1Color,
+                child: Row(
+                  spacing: 10,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Recommend',
+                      style: KlabelStyle,
+                    ),
+                    Text(
+                      '$Interpretation',
+                      style: KlabelStyle,
+                    ),
+                  ],
                 ),
-                Text(
-                  '$Interpretation',
-                  style: KresultStyle,
+              ),
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                 Navigator.pop(context);
+                },
+                child: Container(
+                  child: Center(
+                      child: Text(
+                        'ReCalculate',
+                        style: KresultStyle,
+                      )),
+                  margin: EdgeInsets.only(top: 40),
+                  width: double.infinity,
+                  height: MediaQuery.of(context).size.height / 8,
+                  color: Color(0xffeb1555),
                 ),
-              ],
+              ),
             ),
 
           ],

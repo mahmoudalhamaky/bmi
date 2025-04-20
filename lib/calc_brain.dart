@@ -21,7 +21,7 @@ else {return "UnderWeight";}
   String? GetInterpretation(){
     if (_bmi >= 25){return "its a high body weight";}
     else if (_bmi>=15.5){return "you have a normal body weight, Good Job";}
-    else {return "lower than mostafa zaglol body weight,eat more";}
+    else {return "lower body weight,eat more";}
   }
 
 }

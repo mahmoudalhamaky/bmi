@@ -27,6 +27,7 @@ class _BmiState extends State<Bmi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Center(child: Text('BMI Calculator')),),
         body: SafeArea(
           child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -273,13 +274,11 @@ class _BmiState extends State<Bmi> {
   }
 }
 class ReusableCard extends StatelessWidget {
-  ReusableCard(
-      {super.key, required this.colour, this.CardChild, required this.onTap});
+  ReusableCard({super.key, required this.colour, this.CardChild, required this.onTap});
 
   final Color colour;
   final Widget? CardChild;
   Function()? onTap;
-  
 
   @override
   Widget build(BuildContext context) {
@@ -287,8 +286,8 @@ class ReusableCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         child: Center(child: CardChild),
-        height: 200,
-            //MediaQuery.of(context).size.height / 4,
+        height: //200,
+            MediaQuery.of(context).size.height / 5,
         width: MediaQuery.of(context).size.width / 2,
         decoration: BoxDecoration(
             color: colour, borderRadius: BorderRadius.circular(20)),
